@@ -2,7 +2,7 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #dc3545;
+  --primary-color: #0c7be2;
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -18,7 +18,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
+  /* line-height: 1.6; */
   background-color: #fff;
   color: #333;
 }
@@ -45,7 +45,7 @@ img {
   max-width: 1100px;
   margin: auto;
   overflow: hidden;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 /* Text Styles*/
@@ -111,7 +111,7 @@ img {
 
 /* Cards */
 .card {
-  padding: 1rem;
+  padding: 0.4rem;
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
 }
@@ -122,7 +122,7 @@ img {
 }
 
 .list li {
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.1rem;
 }
 
 /* Padding */
@@ -200,7 +200,7 @@ img {
   display: inline-block;
   background: var(--light-color);
   color: #333;
-  padding: 0.4rem 1.3rem;
+  padding: 0.2rem 1.3rem;
   font-size: 1rem;
   border: none;
   cursor: pointer;
@@ -351,7 +351,7 @@ table th {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.7rem 2rem;
+  padding: 0.3rem 1rem;
   z-index: 1;
   width: 100%;
   opacity: 0.9;
@@ -374,6 +374,27 @@ table th {
 
 .navbar .welcome span {
   margin-right: 0.6rem;
+}
+
+/* Animation (React-Transition-Group)*/
+.remove-btn {
+  margin-right: 0.5rem;
+}
+
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+ 
+  transition: opacity 1000ms ease-in;
 }
 
 /* Mobile Styles */
