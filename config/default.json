@@ -1,3 +1,4 @@
 {
-    "jwtSecret":"secret"
+  "jwtSecret": "Sackey",
+  "mongoURI": "mongodb+srv://sacmongo:Sacdb@786@test.ukunm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 }
