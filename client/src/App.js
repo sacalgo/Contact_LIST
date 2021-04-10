@@ -7,17 +7,17 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
-import Alerts from './components/layout/Alerts';
+import Alerts from "./components/layout/Alerts";
+import PrivateRoute from "./components/routing/PrivateRoute";
 
 import ContactState from "./context/contact/ContactState";
 import AuthState from "./context/auth/AuthState";
-import AlertState from './context/alert/AlertState';
+import AlertState from "./context/alert/AlertState";
 
-
-import setAuthToken from './utils/setAuthToken';
+import setAuthToken from "./utils/setAuthToken";
 import "./App.css";
 
-if(localStorage.token){
+if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
 const App = () => {
@@ -29,9 +29,9 @@ const App = () => {
             <Fragment>
               <Navbar></Navbar>
               <div className="container">
-                <Alerts/>
+                <Alerts />
                 <Switch>
-                  <Route exact path="/" component={Home} />
+                  <PrivateRoute exact path="/" component={Home} />
                   <Route exact path="/about" component={About} />
                   <Route exact path="/register" component={Register} />
                   <Route exact path="/login" component={Login} />
