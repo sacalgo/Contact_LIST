@@ -1,10 +1,9 @@
 /* eslint-disable no-unused-vars */
-import React,{useContext, useEffect} from "react";
+import React, {useContext, useEffect} from "react";
 import Contacts from "../contacts/Contacts";
 import ContactForm from '../contacts/ContactForm';
 import ContactFilter from "../../context/contact/ContactFilter";
 import AuthContext from '../../context/auth/AuthContext';
-
 const Home = () => {
   const authContext=useContext(AuthContext);
   useEffect(()=>{
@@ -18,7 +17,6 @@ const Home = () => {
         <ContactForm></ContactForm>
 
       </div>
-
       <div>
          <ContactFilter/>
           <Contacts></Contacts>
