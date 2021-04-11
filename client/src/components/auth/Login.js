@@ -78,7 +78,7 @@ const Login = (props) => {
       </form>
       <div>
         <h2 style={{textAlign:'center'}}>
-          <a href="/register"> Doesn't have an account? click here</a>{" "}
+          <Link to="/register"> Doesn't have an account? click here</Link>{" "}
         </h2>
       </div>
     </div>
