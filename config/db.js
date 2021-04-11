@@ -4,6 +4,7 @@ const config = require("config");
 //   "mongodb+srv://sacmongo:Sacdb@786@test.ukunm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const db =config.get('mongoURI');
 // console.log(db);
+
 const connectDB = async () => {
   try {
     await mongoose.connect(db, {
