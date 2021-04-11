@@ -74,7 +74,7 @@ router.put("/:id", auth, async (req, res) => {
     contact = await Contact.findByIdAndUpdate(
       req.params.id,
       { $set: contactFields },
-      { new: true }
+      { new: true, useFindAndModify: false }
     );
 
     res.json(contact);
@@ -97,7 +97,9 @@ router.delete("/:id", auth, async (req, res) => {
       return res.status(401).json({ msg: "Unauthroized" });
     }
 
-    await Contact.findByIdAndRemove(req.params.id);
+    await Contact.findByIdAndRemove(req.params.id, {
+      useFindAndModify:false
+    });
 
     res.json({ msg: "Contact removed" });
   } catch (err) {
