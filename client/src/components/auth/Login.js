@@ -3,6 +3,8 @@
 import React, { useState, useContext, useEffect } from "react";
 import AuthContext from "../../context/auth/AuthContext";
 import AlertContext from "../../context/alert/AlertContext";
+import Register from './Register';
+import {Link } from 'react-router-dom';
 const Login = (props) => {
   const alertContext = useContext(AlertContext);
   const authContext = useContext(AuthContext);
@@ -74,6 +76,11 @@ const Login = (props) => {
           className="btn btn-primary btn-block"
         />
       </form>
+      <div>
+        <h2 style={{textAlign:'center'}}>
+          <a href="/register"> Doesn't have an account? click here</a>{" "}
+        </h2>
+      </div>
     </div>
   );
 };
